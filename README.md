@@ -1,9 +1,12 @@
 # kata-code
-Here an implemantation of the kata
+Here an implemantation of the kata according to the Gilded Rose Requirements Specification
+Requirements can be found in : https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRoseRequirements.txt
 
-## Done
-- implementation of the algorithm
+## How To Run
+- Entry point of the algorithm is the GildedRose class (updateQuality method)
+- Please refer to the GildedRoseTest class for the usage of the new implementation  
 
-## Still to be done
-- Unit tests to be added
-- Readme file to be completed
+## What was Done
+- Implementation of the algorithm
+- Change the updateQuality method in GildedRose class to use the new algorithm
+- Unit tests added
