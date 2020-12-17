@@ -5,6 +5,8 @@
  */
 package com.gildedrose.quality;
 
+import com.gildedrose.Item;
+
 /**
  *
  * @author EXH892
@@ -16,5 +18,7 @@ public class NoQualityDecreaseConsumer extends QualityConsumer{
     public NoQualityDecreaseConsumer() {
         super(NO_DECREASE_QUALITY);
     }
-    
+
+    @Override
+    public void accept(Item item) {}
 }

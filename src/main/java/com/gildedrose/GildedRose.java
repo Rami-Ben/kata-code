@@ -16,9 +16,9 @@ class GildedRose {
         Arrays.asList(items).forEach(entry -> {
             IGildedRoseExecutor qualityExecutor = QualityExecutorFactory.executorFor(entry);
             qualityExecutor.execute(entry);
-//            
-//            IGildedRoseExecutor InSellexecutor = SellInExecutorFactory.executorFor(entry);
-//            InSellexecutor.execute(entry);
+
+            IGildedRoseExecutor InSellexecutor = SellInExecutorFactory.executorFor(entry);
+            InSellexecutor.execute(entry);
         });
     }
 

@@ -9,19 +9,24 @@ import com.gildedrose.Item;
 import com.gildedrose.executor.GildedRoseExecutorImpl;
 import java.util.Arrays;
 import com.gildedrose.executor.IGildedRoseExecutor;
+import java.util.List;
 
 /**
  *
  * @author EXH892
  */
 public class SellInExecutorFactory {
-    
-    public static IGildedRoseExecutor executorFor(Item item){
-        return Arrays.asList(new GildedRoseExecutorImpl((Item i) -> true, (Item i) -> i.sellIn = i.sellIn - 1))
+
+    public static IGildedRoseExecutor executorFor(Item item) {
+        return SELL_IN_EXECUTORS
                 .stream().filter(exec -> exec.isApplicableFor(item))
-                .findAny()
+                .findFirst()
                 .get();
     }
-    
-    
+
+    private static final List<GildedRoseExecutorImpl> SELL_IN_EXECUTORS = Arrays.asList(
+            new GildedRoseExecutorImpl((Item i) -> "Sulfuras, Hand of Ragnaros".equals(i.name), (Item i) -> {}),
+            new GildedRoseExecutorImpl((Item i) -> true, (Item i) -> i.sellIn = i.sellIn - 1)
+    );
+
 }
