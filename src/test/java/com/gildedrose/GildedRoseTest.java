@@ -43,7 +43,7 @@ class GildedRoseTest {
                     Arrays.asList(items).stream()
                             .map(item -> item.sellIn)
                             .collect(Collectors.toList()));
-            app.update();
+            app.updateQuality();
         }
     }
 
